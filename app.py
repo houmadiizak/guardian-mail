@@ -6,7 +6,7 @@ VT_API_KEY = "VOTRE_CLE_API_ICI"
 
 # --- FONCTIONS TECHNIQUES ---
 def extraire_liens(texte):
-return list(set(re.findall(r'(https?://[^\s]+)', texte)))
+    return list(set(re.findall(r'(https?://[^\s]+)', texte)))
 
 def verifier_fichier_vt(file_content):
 file_hash = hashlib.sha256(file_content).hexdigest()
@@ -89,3 +89,4 @@ st.error("Adresse mail invalide.")
 
 st.sidebar.markdown("---")
 st.sidebar.caption("Propulsé par Streamlit & VirusTotal")
+
